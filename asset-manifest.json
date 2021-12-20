@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/gym-routine/static/css/main.50516549.chunk.css",
+    "main.js": "/gym-routine/static/js/main.2b58231c.chunk.js",
+    "main.js.map": "/gym-routine/static/js/main.2b58231c.chunk.js.map",
+    "runtime-main.js": "/gym-routine/static/js/runtime-main.d038856a.js",
+    "runtime-main.js.map": "/gym-routine/static/js/runtime-main.d038856a.js.map",
+    "static/js/2.b125b9ba.chunk.js": "/gym-routine/static/js/2.b125b9ba.chunk.js",
+    "static/js/2.b125b9ba.chunk.js.map": "/gym-routine/static/js/2.b125b9ba.chunk.js.map",
+    "static/js/3.ab1b9c6d.chunk.js": "/gym-routine/static/js/3.ab1b9c6d.chunk.js",
+    "static/js/3.ab1b9c6d.chunk.js.map": "/gym-routine/static/js/3.ab1b9c6d.chunk.js.map",
+    "index.html": "/gym-routine/index.html",
+    "static/css/main.50516549.chunk.css.map": "/gym-routine/static/css/main.50516549.chunk.css.map",
+    "static/js/2.b125b9ba.chunk.js.LICENSE.txt": "/gym-routine/static/js/2.b125b9ba.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d038856a.js",
+    "static/js/2.b125b9ba.chunk.js",
+    "static/css/main.50516549.chunk.css",
+    "static/js/main.2b58231c.chunk.js"
+  ]
+}
