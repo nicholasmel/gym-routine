@@ -51,7 +51,7 @@ function Home() {
         tipThree={'Slightly bend elbows'}>
       </CardRight>
       <CardLeft
-        exerciseImage={'https://cdn1.coachmag.co.uk/sites/coachmag/files/2019/04/bicep-curl.jpg'}
+        exerciseImage={'https://cdn.mos.cms.futurecdn.net/PUh4gpdENASaQybBDXAgPj-1024-80.jpg.webp'}
         exercise={'Dumbbell Bicep Curls'}
         tipOne={'Maintain straight posture at all times and do not lean backwards'}
         tipTwo={'Breaking form only done when passed failure'}>

@@ -478,6 +478,8 @@ const Menu = styled.div`
     justify-items: center;
     background-image: url('https://s3.amazonaws.com/nikeinc/assets/80354/JustDoItHQ_20180620-JDIHQ-036_hd_1600.jpg?1529593278');
     background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     h1 {
         margin-top: 0px;
@@ -486,7 +488,7 @@ const Menu = styled.div`
 `
 const Calc = styled.div`
     height: auto;
-    width: 60vw;
+    width: 40vw;
     border-color: #f8f8f8;
     border-style: solid;
     border-radius: 5px;

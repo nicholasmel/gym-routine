@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Fade } from 'react-reveal';
 
@@ -51,8 +51,8 @@ const Workout = styled.div`
     background-color: #111111;
 `
 const Exercise = styled.div`
-    height: 260px;
-    width: 440px;
+    height: 40vh;
+    width: 40vw;
     overflow: hidden;
     text-align: center;
     margin-right: 80px;
@@ -60,12 +60,17 @@ const Exercise = styled.div`
     img {
         height: 100%;
         width: 100%;
+        object-fit: cover;
+
+        @media screen and (max-width: 600px){
+            display: none;
+        }
     }
 `
 
 const Description = styled.div`
-    height: 260px;
-    width: 440px;
+    height: 40vh;
+    width: 40vw;
     overflow: hidden;
     text-align: center;
     background-color: #111111;
@@ -78,9 +83,12 @@ const Description = styled.div`
 
     p {
         color: #bebebe;
-        text-align: left;
-        margin-left: 2vw;
+        text-align: middle;
         font-style: italic;
+    }
+
+    @media screen and (max-width: 600px){
+        margin-right: 55vw;
     }
 `
 
