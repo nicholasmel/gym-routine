@@ -271,12 +271,9 @@ function Calculation() {
     return (
         <Container>
             <Menu>
-                <Fade top>
-                    <h1>Do Better, Be Better.</h1>
-                </Fade>
                 <Calc>
                     <Fade bottom>
-                        <h1>Start your program!</h1>
+                        <h1>Begin your fitness journey!</h1>
                     </Fade>
                     <HeightWeight>
                         <Fade>
@@ -304,146 +301,178 @@ function Calculation() {
                                 </Select>
                             </FormControl>
                         </Box>
-                        <Fade>
-                            <Button variant="contained" onClick={() => computeData()}>Calculate Routine</Button>
-                        </Fade>
                     </HeightWeight>
+                    <Fade>
+                        <Button variant="contained" onClick={() => computeData()}>Calculate Routine</Button>
+                    </Fade>
                 </Calc>
             </Menu>
             <BottomMenu>
                 <Fade top>
                     <h1>Results</h1>
                 </Fade>
-                <Fade bottom>
-                    <TableContainer
-                        component={Paper}
-                        elevation={16}
-                        sx={{ marginBottom: '40px' }}>
-                        <Table aria-label="collapsible table">
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell sx={{
-                                        fontWeight: 'bold',
-                                        fontSize: 20
-                                    }}>CHEST</TableCell>
-                                    <TableCell sx={{ fontWeight: 'bold' }}>Exercise&nbsp;(s)</TableCell>
-                                    <TableCell sx={{ fontWeight: 'bold' }} align="right">Sets</TableCell>
-                                    <TableCell sx={{ fontWeight: 'bold' }} align="right">One Rep Max (lbs)</TableCell>
-                                    <TableCell />
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                {chest.map((row) => (
-                                    <Row key={row.exerciseName} row={row} />
-                                ))}
-                            </TableBody>
-                        </Table>
-                    </TableContainer>
-                </Fade>
-                <Fade bottom>
-                    <TableContainer
-                        component={Paper}
-                        elevation={16}
-                        sx={{ marginBottom: '40px' }}>
-                        <Table aria-label="collapsible table">
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell sx={{
-                                        fontWeight: 'bold',
-                                        fontSize: 20
-                                    }}>SHOULDERS</TableCell>
-                                    <TableCell sx={{ fontWeight: 'bold' }}>Exercise&nbsp;(s)</TableCell>
-                                    <TableCell sx={{ fontWeight: 'bold' }} align="right">Sets</TableCell>
-                                    <TableCell sx={{ fontWeight: 'bold' }} align="right">One Rep Max (lbs)</TableCell>
-                                    <TableCell />
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                {shoulders.map((row) => (
-                                    <Row key={row.exerciseName} row={row} />
-                                ))}
-                            </TableBody>
-                        </Table>
-                    </TableContainer>
-                </Fade>
-                <Fade bottom>
-                    <TableContainer
-                        component={Paper}
-                        elevation={16}
-                        sx={{ marginBottom: '40px' }}>
-                        <Table aria-label="collapsible table">
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell sx={{
-                                        fontWeight: 'bold',
-                                        fontSize: 20
-                                    }}>ARMS</TableCell>
-                                    <TableCell sx={{ fontWeight: 'bold' }}>Exercise&nbsp;(s)</TableCell>
-                                    <TableCell sx={{ fontWeight: 'bold' }} align="right">Sets</TableCell>
-                                    <TableCell sx={{ fontWeight: 'bold' }} align="right">One Rep Max (lbs)</TableCell>
-                                    <TableCell />
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                {arms.map((row) => (
-                                    <Row key={row.exerciseName} row={row} />
-                                ))}
-                            </TableBody>
-                        </Table>
-                    </TableContainer>
-                </Fade>
-                <Fade bottom>
-                    <TableContainer
-                        component={Paper}
-                        elevation={16}
-                        sx={{ marginBottom: '40px' }}>
-                        <Table aria-label="collapsible table">
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell sx={{
-                                        fontWeight: 'bold',
-                                        fontSize: 20
-                                    }}>BACK</TableCell>
-                                    <TableCell sx={{ fontWeight: 'bold' }}>Exercise&nbsp;(s)</TableCell>
-                                    <TableCell sx={{ fontWeight: 'bold' }} align="right">Sets</TableCell>
-                                    <TableCell sx={{ fontWeight: 'bold' }} align="right">One Rep Max (lbs)</TableCell>
-                                    <TableCell />
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                {back.map((row) => (
-                                    <Row key={row.exerciseName} row={row} />
-                                ))}
-                            </TableBody>
-                        </Table>
-                    </TableContainer>
-                </Fade>
-                <Fade bottom>
-                    <TableContainer
-                        component={Paper}
-                        elevation={16}
-                        sx={{ marginBottom: '2px' }}>
-                        <Table aria-label="collapsible table">
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell sx={{
-                                        fontWeight: 'bold',
-                                        fontSize: 20
-                                    }}>LEGS</TableCell>
-                                    <TableCell sx={{ fontWeight: 'bold' }}>Exercise&nbsp;(s)</TableCell>
-                                    <TableCell sx={{ fontWeight: 'bold' }} align="right">Sets</TableCell>
-                                    <TableCell sx={{ fontWeight: 'bold' }} align="right">One Rep Max (lbs)</TableCell>
-                                    <TableCell />
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                {legs.map((row) => (
-                                    <Row key={row.exerciseName} row={row} />
-                                ))}
-                            </TableBody>
-                        </Table>
-                    </TableContainer>
-                </Fade>
+                <Test>
+                    <Fade bottom>
+                        <TableContainer
+                            component={Paper}
+                            elevation={16}
+                            sx={{ marginBottom: '40px' }}>
+                            <TableCell align="center" sx={{
+                                fontWeight: 'bold',
+                                fontSize: 16
+                            }}>
+                                Chest
+                            </TableCell>
+                            <Table aria-label="collapsible table">
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell sx={{
+                                            fontWeight: 'bold',
+                                            fontSize: 16
+                                        }}></TableCell>
+                                        <TableCell sx={{ fontWeight: 'bold' }}>Exercise&nbsp;(s)</TableCell>
+                                        <TableCell sx={{ fontWeight: 'bold' }} align="right">Sets</TableCell>
+                                        <TableCell sx={{ fontWeight: 'bold' }} align="right">One Rep Max (lbs)</TableCell>
+                                        <TableCell />
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    {chest.map((row) => (
+                                        <Row key={row.exerciseName} row={row} />
+                                    ))}
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
+                    </Fade>
+                    <Fade bottom>
+                        <TableContainer
+                            component={Paper}
+                            elevation={16}
+                            sx={{ marginBottom: '40px' }}>
+                            <TableCell align="center" sx={{
+                                fontWeight: 'bold',
+                                fontSize: 16
+                            }}>
+                                Shoulders
+                            </TableCell>
+                            <Table aria-label="collapsible table">
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell sx={{
+                                            fontWeight: 'bold',
+                                            fontSize: 16
+                                        }}></TableCell>
+                                        <TableCell sx={{ fontWeight: 'bold' }}>Exercise&nbsp;(s)</TableCell>
+                                        <TableCell sx={{ fontWeight: 'bold' }} align="right">Sets</TableCell>
+                                        <TableCell sx={{ fontWeight: 'bold' }} align="right">One Rep Max (lbs)</TableCell>
+                                        <TableCell />
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    {shoulders.map((row) => (
+                                        <Row key={row.exerciseName} row={row} />
+                                    ))}
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
+                    </Fade>
+                    <Fade bottom>
+                        <TableContainer
+                            component={Paper}
+                            elevation={16}
+                            sx={{ marginBottom: '40px' }}>
+                            <TableCell align="center" sx={{
+                                fontWeight: 'bold',
+                                fontSize: 16
+                            }}>
+                                Arms
+                            </TableCell>
+                            <Table aria-label="collapsible table">
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell sx={{
+                                            fontWeight: 'bold',
+                                            fontSize: 16
+                                        }}></TableCell>
+                                        <TableCell sx={{ fontWeight: 'bold' }}>Exercise&nbsp;(s)</TableCell>
+                                        <TableCell sx={{ fontWeight: 'bold' }} align="right">Sets</TableCell>
+                                        <TableCell sx={{ fontWeight: 'bold' }} align="right">One Rep Max (lbs)</TableCell>
+                                        <TableCell />
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    {arms.map((row) => (
+                                        <Row key={row.exerciseName} row={row} />
+                                    ))}
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
+                    </Fade>
+                    <Fade bottom>
+                        <TableContainer
+                            component={Paper}
+                            elevation={16}
+                            sx={{ marginBottom: '40px' }}>
+                            <TableCell align="center" sx={{
+                                fontWeight: 'bold',
+                                fontSize: 16
+                            }}>
+                                Back
+                            </TableCell>
+                            <Table aria-label="collapsible table">
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell sx={{
+                                            fontWeight: 'bold',
+                                            fontSize: 16
+                                        }}></TableCell>
+                                        <TableCell sx={{ fontWeight: 'bold' }}>Exercise&nbsp;(s)</TableCell>
+                                        <TableCell sx={{ fontWeight: 'bold' }} align="right">Sets</TableCell>
+                                        <TableCell sx={{ fontWeight: 'bold' }} align="right">One Rep Max (lbs)</TableCell>
+                                        <TableCell />
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    {back.map((row) => (
+                                        <Row key={row.exerciseName} row={row} />
+                                    ))}
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
+                    </Fade>
+                    <Fade bottom>
+                        <TableContainer
+                            component={Paper}
+                            elevation={16}
+                            sx={{ marginBottom: '2px' }}>
+                            <TableCell align="center" sx={{
+                                fontWeight: 'bold',
+                                fontSize: 16
+                            }}>
+                                Legs
+                            </TableCell>
+                            <Table aria-label="collapsible table">
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell sx={{
+                                            fontWeight: 'bold',
+                                            fontSize: 16
+                                        }}></TableCell>
+                                        <TableCell sx={{ fontWeight: 'bold' }}>Exercise&nbsp;(s)</TableCell>
+                                        <TableCell sx={{ fontWeight: 'bold' }} align="right">Sets</TableCell>
+                                        <TableCell sx={{ fontWeight: 'bold' }} align="right">One Rep Max (lbs)</TableCell>
+                                        <TableCell />
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    {legs.map((row) => (
+                                        <Row key={row.exerciseName} row={row} />
+                                    ))}
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
+                    </Fade>
+                </Test>
             </BottomMenu>
         </Container >
     )
@@ -470,10 +499,9 @@ const Menu = styled.div`
     background-color: white;
     width: auto;
     padding: 0px 10vw;
-    padding-top: 160px;
+    padding-top: 120px;
     padding-bottom: 80px;
     text-align: center;
-    position: relative;
     align-content: center;
     justify-items: center;
     background-image: url('https://s3.amazonaws.com/nikeinc/assets/80354/JustDoItHQ_20180620-JDIHQ-036_hd_1600.jpg?1529593278');
@@ -499,9 +527,8 @@ const Calc = styled.div`
     background-color: #f8f8f8;
     
     button {
-        margin-top: 20px;
+        margin-top: 40px;
         font-size: 18px;
-
     }
 
     h1 {
@@ -517,13 +544,14 @@ const HeightWeight = styled.div`
     height: auto;
     width: auto;
     background-color: #f8f8f8;
-    text-align: center;
-    justify-content: center;
+    display: flex;
+    align-items: center;
 
     h2 {
-        margin-right: 20px;
+        margin-right: 10px;
         margin-left: 20px;
         font-size: 16px;
+        text-align: center;
     }
 
     input {
@@ -534,13 +562,27 @@ const HeightWeight = styled.div`
 const BottomMenu = styled.div`
     background-color: #f8f8f8;
     width: auto;
-    padding: 0px 10vw;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    height: auto;
+    padding: 14px 10vw;
+
+    h1 {
+        margin-top: 0px;
+        text-align: left;
+        color: black;
+        font-weight: 700;
+        font-size: 2.5em;
+    }
+`
+
+const Test = styled.div`
+    background-color: #f8f8f8;
+    width: auto;
     text-align: center;
-    position: relative;
-    align-content: center;
-    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    row-gap: 1em;
+    margin-bottom: 60px;
 
     h1 {
         margin-top: 0px;
