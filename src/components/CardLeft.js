@@ -35,6 +35,7 @@ const Container = styled.div`
     overflow: hidden;
     padding-top: 20px;
     padding-bottom: 20px;
+    box-shadow: 0px 0px 100px 100px #111111;
     
     h1 {
         text-align: center;

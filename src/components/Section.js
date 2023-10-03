@@ -19,7 +19,7 @@ const Container = styled.div`
   background-size: cover;
   background-position: ${props => props.ps === "bottom" ? "bottom" : "center"};
   background-repeat: no-repeat;
-  height: 140px;
+  height: 30vh;
   width: 100vw;
   overflow: hidden;
 

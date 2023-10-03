@@ -311,15 +311,15 @@ function Calculation() {
                 <Fade top>
                     <h1>Results</h1>
                 </Fade>
-                <Test>
+                <Results>
                     <Fade bottom>
                         <TableContainer
                             component={Paper}
                             elevation={16}
-                            sx={{ marginBottom: '40px' }}>
+                            sx={{ marginBottom: '40px', width: '36vw' }}>
                             <TableCell align="center" sx={{
                                 fontWeight: 'bold',
-                                fontSize: 16
+                                fontSize: 16,
                             }}>
                                 Chest
                             </TableCell>
@@ -348,7 +348,7 @@ function Calculation() {
                         <TableContainer
                             component={Paper}
                             elevation={16}
-                            sx={{ marginBottom: '40px' }}>
+                            sx={{ marginBottom: '40px', width: '36vw' }}>
                             <TableCell align="center" sx={{
                                 fontWeight: 'bold',
                                 fontSize: 16
@@ -380,7 +380,7 @@ function Calculation() {
                         <TableContainer
                             component={Paper}
                             elevation={16}
-                            sx={{ marginBottom: '40px' }}>
+                            sx={{ marginBottom: '40px', width: '36vw' }}>
                             <TableCell align="center" sx={{
                                 fontWeight: 'bold',
                                 fontSize: 16
@@ -412,7 +412,7 @@ function Calculation() {
                         <TableContainer
                             component={Paper}
                             elevation={16}
-                            sx={{ marginBottom: '40px' }}>
+                            sx={{ marginBottom: '40px', width: '36vw' }}>
                             <TableCell align="center" sx={{
                                 fontWeight: 'bold',
                                 fontSize: 16
@@ -444,7 +444,7 @@ function Calculation() {
                         <TableContainer
                             component={Paper}
                             elevation={16}
-                            sx={{ marginBottom: '2px' }}>
+                            sx={{ marginBottom: '20px', width: '36vw' }}>
                             <TableCell align="center" sx={{
                                 fontWeight: 'bold',
                                 fontSize: 16
@@ -472,7 +472,7 @@ function Calculation() {
                             </Table>
                         </TableContainer>
                     </Fade>
-                </Test>
+                </Results>
             </BottomMenu>
         </Container >
     )
@@ -574,12 +574,13 @@ const BottomMenu = styled.div`
     }
 `
 
-const Test = styled.div`
-    background-color: #f8f8f8;
+const Results = styled.div`
     width: auto;
+    height: auto;
     text-align: center;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
     column-gap: 10px;
     row-gap: 1em;
     margin-bottom: 60px;
