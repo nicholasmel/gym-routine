@@ -24,140 +24,58 @@ function Calculation() {
         setBench(Math.floor(weight * level));
     }
 
-    function createData(exerciseName, exerciseSets, oneRepMax, ratio, protein, price) {
+    function calculateSets(sets, ratio) {
+        var workingSets = [];
+        var totalReps = [12, 12, 10, 10, 8];
+        var totalRatio = [0.7, 0.7, 0.4, 0.3, 0.3];
+        for (let i = 1; i <= sets; i++) {
+            workingSets.push({
+                sets: i,
+                exerciseWeight: weight !== '' ? Math.floor(weight * level * totalRatio[i - 1] * ratio) : "NA",
+                exerciseReps: totalReps[i - 1],
+            });
+        }
+
+        return workingSets;
+    }
+
+    function createData(exerciseName, exerciseSets, oneRepMax, ratio) {
         return {
             exerciseName,
             exerciseSets,
             oneRepMax,
             ratio,
-            protein,
-            price,
-            workingSet: [
-                {
-                    sets: 1,
-                    exerciseWeight: Math.floor(weight * level * 0.30 * ratio),
-                    exerciseReps: 12,
-                },
-                {
-                    sets: 2,
-                    exerciseWeight: Math.floor(weight * level * 0.50 * ratio),
-                    exerciseReps: 10,
-                },
-                {
-                    sets: 3,
-                    exerciseWeight: Math.floor(weight * level * 0.80 * ratio),
-                    exerciseReps: 8,
-                },
-                {
-                    sets: 4,
-                    exerciseWeight: Math.floor(weight * level * 0.90 * ratio),
-                    exerciseReps: 4,
-                },
-            ],
+            workingSet: calculateSets(3, ratio)
         };
     }
 
-    function createDataPower(exerciseName, exerciseSets, oneRepMax, ratio, protein, price) {
+    function createDataPower(exerciseName, exerciseSets, oneRepMax, ratio) {
         return {
             exerciseName,
             exerciseSets,
             oneRepMax,
             ratio,
-            protein,
-            price,
-            workingSet: [
-                {
-                    sets: 1,
-                    exerciseWeight: Math.floor(weight * level * 0.30 * ratio),
-                    exerciseReps: 12,
-                },
-                {
-                    sets: 2,
-                    exerciseWeight: Math.floor(weight * level * 0.50 * ratio),
-                    exerciseReps: 10,
-                },
-                {
-                    sets: 3,
-                    exerciseWeight: Math.floor(weight * level * 0.74 * ratio),
-                    exerciseReps: 8,
-                },
-                {
-                    sets: 4,
-                    exerciseWeight: Math.floor(weight * level * 0.85 * ratio),
-                    exerciseReps: 4,
-                },
-                {
-                    sets: 5,
-                    exerciseWeight: Math.floor(weight * level * 0.90 * ratio),
-                    exerciseReps: 2,
-                },
-            ],
+            workingSet: calculateSets(exerciseSets, ratio)
         };
     }
 
-    function createDataHyper(exerciseName, exerciseSets, oneRepMax, ratio, protein, price) {
+    function createDataHyper(exerciseName, exerciseSets, oneRepMax, ratio) {
         return {
             exerciseName,
             exerciseSets,
             oneRepMax,
             ratio,
-            protein,
-            price,
-            workingSet: [
-                {
-                    sets: 1,
-                    exerciseWeight: Math.floor(weight * level * 0.30 * ratio),
-                    exerciseReps: 12,
-                },
-                {
-                    sets: 2,
-                    exerciseWeight: Math.floor(weight * level * 0.40 * ratio),
-                    exerciseReps: 10,
-                },
-                {
-                    sets: 3,
-                    exerciseWeight: Math.floor(weight * level * 0.60 * ratio),
-                    exerciseReps: 8,
-                },
-                {
-                    sets: 4,
-                    exerciseWeight: Math.floor(weight * level * 0.50 * ratio),
-                    exerciseReps: 'To Failure',
-                },
-            ],
+            workingSet: calculateSets(exerciseSets, ratio)
         };
     }
 
-    function createDataDumbbell(exerciseName, exerciseSets, oneRepMax, ratio, protein, price) {
+    function createDataDumbbell(exerciseName, exerciseSets, oneRepMax, ratio) {
         return {
             exerciseName,
             exerciseSets,
             oneRepMax,
             ratio,
-            protein,
-            price,
-            workingSet: [
-                {
-                    sets: 1,
-                    exerciseWeight: Math.floor(weight * level * 0.30 * ratio) + ' per dumbbell',
-                    exerciseReps: 12,
-                },
-                {
-                    sets: 2,
-                    exerciseWeight: Math.floor(weight * level * 0.50 * ratio) + ' per dumbbell',
-                    exerciseReps: 10,
-                },
-                {
-                    sets: 3,
-                    exerciseWeight: Math.floor(weight * level * 0.80 * ratio) + ' per dumbbell',
-                    exerciseReps: 8,
-                },
-                {
-                    sets: 4,
-                    exerciseWeight: Math.floor(weight * level * 0.90 * ratio) + ' per dumbbell',
-                    exerciseReps: 4,
-                },
-            ],
+            workingSet: calculateSets(exerciseSets, ratio)
         };
     }
 
@@ -239,21 +157,21 @@ function Calculation() {
     };
 
     const chest = [
-        createDataPower('Bench Press', 5, Math.floor(bench), 1),
+        createDataPower('Bench Press', 3, Math.floor(bench), 1),
         createDataDumbbell('Incline Dumbbell Bench Press', 4, 'NA', .4),
-        createDataHyper('Machine Chest Fly', 4, 'NA', .6),
+        createDataHyper('Machine Chest Fly', 3, 'NA', .6),
     ];
 
     const shoulders = [
-        createDataDumbbell('Dumbbell Shoulder Press', 4, 'NA', .3),
+        createDataDumbbell('Dumbbell Shoulder Press', 3, 'NA', .3),
         createDataDumbbell('Dumbbell Lateral Raise', 4, 'NA', .1),
-        createDataHyper('Machine Rear Delt Fly', 4, 'NA', .5),
+        createDataHyper('Machine Rear Delt Fly', 3, 'NA', .5),
     ];
 
     const arms = [
-        createDataDumbbell('Dumbbell Bicep Curls', 4, 'NA', .1),
-        createDataHyper('Tricep Pushdown', 4, 'NA', .3),
-        createData('Dumbbell Wrist Curl', 4, 'NA', .1),
+        createDataDumbbell('Dumbbell Bicep Curls', 3, 'NA', .1),
+        createDataHyper('Tricep Pushdown', 3, 'NA', .3),
+        createData('Dumbbell Wrist Curl', 3, 'NA', .1),
     ];
 
     const back = [
