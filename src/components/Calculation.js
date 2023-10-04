@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import { Select, InputLabel, MenuItem, TextField, Button, FormControl, Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Collapse, Typography, IconButton } from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -11,6 +11,7 @@ function Calculation() {
     const [weight, setWeight] = useState('');
     const [level, setLevel] = useState('');
     const [bench, setBench] = useState(false);
+    const ref = useRef(null);
 
     const handleChange = (event) => {
         setLevel(event.target.value);
@@ -22,6 +23,7 @@ function Calculation() {
 
     function computeData() {
         setBench(Math.floor(weight * level));
+        ref.current?.scrollIntoView({ behavior: 'smooth' });
     }
 
     function calculateSets(sets, ratio) {
@@ -225,7 +227,7 @@ function Calculation() {
                     </Fade>
                 </Calc>
             </Menu>
-            <BottomMenu>
+            <BottomMenu ref={ref}>
                 <Fade top>
                     <h1>Results</h1>
                 </Fade>
@@ -234,7 +236,7 @@ function Calculation() {
                         <TableContainer
                             component={Paper}
                             elevation={16}
-                            sx={{ marginBottom: '40px', width: '36vw' }}>
+                            sx={{ marginBottom: '40px', width: '38vw' }}>
                             <TableCell align="center" sx={{
                                 fontWeight: 'bold',
                                 fontSize: 16,
@@ -266,7 +268,7 @@ function Calculation() {
                         <TableContainer
                             component={Paper}
                             elevation={16}
-                            sx={{ marginBottom: '40px', width: '36vw' }}>
+                            sx={{ marginBottom: '40px', width: '38vw' }}>
                             <TableCell align="center" sx={{
                                 fontWeight: 'bold',
                                 fontSize: 16
@@ -298,7 +300,7 @@ function Calculation() {
                         <TableContainer
                             component={Paper}
                             elevation={16}
-                            sx={{ marginBottom: '40px', width: '36vw' }}>
+                            sx={{ marginBottom: '40px', width: '38vw' }}>
                             <TableCell align="center" sx={{
                                 fontWeight: 'bold',
                                 fontSize: 16
@@ -330,7 +332,7 @@ function Calculation() {
                         <TableContainer
                             component={Paper}
                             elevation={16}
-                            sx={{ marginBottom: '40px', width: '36vw' }}>
+                            sx={{ marginBottom: '40px', width: '38vw' }}>
                             <TableCell align="center" sx={{
                                 fontWeight: 'bold',
                                 fontSize: 16
@@ -362,7 +364,7 @@ function Calculation() {
                         <TableContainer
                             component={Paper}
                             elevation={16}
-                            sx={{ marginBottom: '20px', width: '36vw' }}>
+                            sx={{ marginBottom: '20px', width: '38vw' }}>
                             <TableCell align="center" sx={{
                                 fontWeight: 'bold',
                                 fontSize: 16
@@ -481,7 +483,7 @@ const BottomMenu = styled.div`
     background-color: #f8f8f8;
     width: auto;
     height: auto;
-    padding: 14px 10vw;
+    padding: 60px 10vw;
 
     h1 {
         margin-top: 0px;
